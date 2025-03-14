@@ -1,0 +1,10 @@
+objectives
+
+need of big o notation
+
+for a problem there are 10 solutions
+
+would be great if we have sytem which says which code is great , good ok bad 
+its important to have a precise vocabulary to talk about how our code performs
+useful for discussing trade offs between different approches 
+

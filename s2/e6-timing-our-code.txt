@@ -1,0 +1,81 @@
+2 solutions to the same problem
+
+sum of 1 to n 
+
+loop
+
+formula 
+
+what is better
+
+but what is better actually mean 
+does that mean faster code ? how long the code takes to execute 
+or how much memory it is used 
+or more readable 
+
+does that mean faster code ? how long the code takes to execute 
+we can get to the code execution time using some builtin functions using performance.now()
+
+
+for solution1
+
+function addUpTo(n){
+    let total = 0;
+    for (let i = 0; i<=n; i++){
+        total +=i;
+    }
+    return total;
+}
+
+let t1 = performance.now();
+//gives number of milliseconds since we opened the window in the browser 
+addUpTo(6000000000);
+let t2 = performance.now();
+console.log(`time elapsed: ${(t2-t1)/1000} seconds`);
+
+1. 2 seconds
+1.6 seconds
+2 seconds
+
+Note: this time difference changes even in the same computer this diff can keep on changing, everytime this 
+diff may not be constant
+
+in this avg time diff is around 2 seconds 
+
+
+for solution2
+
+function addUpTo(n){
+   const total = n* (n+1)/2;
+    return total;
+}
+
+let t1 = performance.now();
+//gives number of milliseconds since we opened the window in the browser 
+addUpTo(6000000000);
+let t2 = performance.now();
+console.log(`time elapsed: ${(t2-t1)/1000} seconds`);
+
+0.000102 seconds
+0.000104 seconds 
+
+
+Note: this time difference changes even in the same computer this diff can keep on changing, everytime this 
+diff may not be constant
+in this solutions the the avg time diff is very less compared to the first solution  for the same input data 
+
+so this process manually comparing the time between two solutions to find which one code is faster is not reliable everytime because
+
+different machines will record different times depending on the specifications of the machine
+does not mean that above first solution takes less time than second solution
+just that margins can vary means diff between first solution and second solution can vary from machine to machine depending upon the specification of the system
+also even same machine records different times
+
+
+so how to say which code is better without the above time thing 
+so timing your code is a bad idea 
+thats where the big o notation comes into the picture
+
+
+
+
