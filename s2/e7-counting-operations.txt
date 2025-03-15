@@ -1,0 +1,36 @@
+if not time, what we should
+
+we can do is count number of simple operations the computer has to perform rather than exact time 
+
+function addUpTo(n){
+   const total = n* (n+1)/2;
+    return total;
+}
+here if we take 
+here 3 operations * + / happening irrespetive of the n 
+
+here  
+function addUpTo(n){
+    let total = 0;
+    for (let i = 0; i<=n; i++){
+        total +=i;
+    }
+    return total;
+}
+
+here n operations because if 
+n is 10 then + is happening n additions 
+and n = assignments 
+and i++ here n times this will happen 
+no need of going through small operations 
+ let total = 0; 1 operation 
+ let i = 0; 1 operation 
+ i<=n n comparisons so n operations
+
+
+as n grows the operations increases 
+
+so first solution has 3 operations
+so second solution has 5n + 2 operations ~ n 
+
+
