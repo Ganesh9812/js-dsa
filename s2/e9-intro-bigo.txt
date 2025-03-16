@@ -1,0 +1,32 @@
+Big o 
+
+it tells how the run time of the algorithm grows as the size of the input grows 
+
+when we talk about Big o we are talking about worst case scenario 
+
+eg:
+
+function addUpTo(n){
+   const total = n* (n+1)/2;
+    return total;
+}
+since irrespective of the input the number of operations is constant 
+
+so Big o is O(1)
+
+
+function addUpTo(n){
+    let total = 0;
+    for (let i = 0; i<=n; i++){
+        total +=i;
+    }
+    return total;
+}
+
+here as n grows the number of operations or run time grows
+so Big o is O(n)
+
+
+for loop inside a loop
+Big o is O(n2)
+
