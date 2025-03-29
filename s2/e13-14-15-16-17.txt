@@ -1,0 +1,114 @@
+objects
+
+underordered datastructures
+where data is stored in key value pairs
+
+when to use objects
+when we dont need order
+when we need fast access insertion and remove 
+searching
+
+let instructor = {
+    firstName: "kelly",
+    isInstrcuturo: true,
+    favoriteNumbers: [1,2,3,4,5]
+}
+
+
+inseration - O(1)
+removal - O(1)
+searching - O(n)
+access - O(1)
+
+searching is different from accessing here 
+
+object.keys - O(n)
+object.values - O(n)
+object.entries - O(n)
+hasownproperty - O(1)
+
+when arrays are slow
+
+
+when to use arrays
+better to use arrays for order 
+for order not needed, there are so many options other than array 
+
+insertion - depends on where we insert
+removal - depends on where we insert 
+searching - O(n)
+access - O(1)
+
+when we try to insert at start then we need to reindex all the elements in the array 
+here with size of input the number of operations increases
+same goes with removing at the beginning and reindex all the elements in the array 
+so because of push and pop are always faster than shift and unshift
+
+built in array methods
+push - O(1)
+pop - O(1)
+shift - O(n)
+unshift - O(n)
+concat - O(n)
+slice - O(n)
+splice - O(n)
+sort - O(n*logn)
+foreach ,map, filter, reduce etc.. O(n)
+
+why array concat is O(n)
+If you concatenate two arrays of sizes m and n, the new array will have m + n elements
+Each element from all input arrays must be copied into the new array
+This means every element is visited once, leading to O(m + n) = O(n) time complexity (where n is the total number of elements)
+
+slice and splice
+Non-Destructive (Does Not Modify Original Array)
+Extracts a portion of an array and returns it as a new array (without changing the original).
+array.slice(startIndex, endIndex);
+startIndex (inclusive) – Where to begin extraction.
+endIndex (exclusive) – Where to stop (not included in the result).
+Negative indices count from the end (-1 = last element).
+returns A new array containing the extracted elements.
+
+const fruits = ['🍎', '🍌', '🍊', '🍇', '🍓'];
+
+const citrus = fruits.slice(1, 3); // ['🍌', '🍊']
+const lastTwo = fruits.slice(-2);  // ['🍇', '🍓']
+
+console.log(fruits); // Original remains unchanged: ['🍎', '🍌', '🍊', '🍇', '🍓']
+
+O(n) as those n elements needs to copy to new array so as input size increases the number of operations also increases 
+
+
+splice() → Destructive (Modifies Original Array)
+Adds, removes, or replaces elements in place (modifies the original array).
+array.splice(startIndex, deleteCount, item1, item2, ...);
+startIndex – Where to start changing the array.
+deleteCount – Number of elements to remove (use 0 to only add).
+item1, item2, ... – Elements to add (optional).
+const numbers = [1, 2, 3, 4, 5];
+const removed = numbers.splice(1, 2); // Removes 2 elements starting at index 1
+console.log(numbers); // Original modified: [1, 4, 5]
+console.log(removed); // Returns deleted elements: [2, 3]
+
+const colors = ['🔴', '🟢'];
+colors.splice(1, 0, '🔵', '🟡'); // Adds at index 1 (deletes 0 elements)
+
+console.log(colors); // ['🔴', '🔵', '🟡', '🟢']
+
+const letters = ['A', 'B', 'C', 'D'];
+const deleted = letters.splice(1, 2, 'X', 'Y'); // Replaces 2 elements starting at index 1
+
+console.log(letters); // ['A', 'X', 'Y', 'D']
+console.log(deleted); // ['B', 'C'] (deleted elements)
+
+❌ Modifies the original array.
+✅ Returns an array of deleted elements.
+🔧 Can add, remove, or replace elements in one go.
+
+O(n)
+
+sort 
+O(n*logn)
+time takes to sort an array larger than O(n)
+
+

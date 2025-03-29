@@ -1,0 +1,6 @@
+
+
+constants does not matter
+O(10+n) will be O(n)
+
+accessing an element in an array by index or an object by key is constant 

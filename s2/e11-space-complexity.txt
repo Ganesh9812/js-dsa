@@ -1,0 +1,30 @@
+auxiliary space complexity
+space required by the algorithm, not including the space taken by the input 
+
+so when we talk about space complexity we talk about auxiliary space complexity
+
+in js 
+most primitive data types like boolean numbers undefined null are constant space 
+strings are O(n)
+ 
+ Reference types are generally O(n) where n for length of array or number of keys in an object 
+
+
+function sum(arr){
+    let total = 0;
+    for (i=0; i<=arr.length; i ++){
+        total += arr[i]
+    }
+    return total;
+}
+here lets focus on space complexity
+here total variable  and i variable
+so here even if programs runs whatsever the number of variables are constant and so the space complexity is constant 
+O(1)
+
+//push method is mutable and push return the length of the final array 
+
+in double the array values method
+as input size array increase new array size also increases
+so O(n)
+

@@ -1,0 +1,25 @@
+here
+
+we assume log = log base 2
+
+log ==== log2
+
+the logarithm of a number roughly measures the number of times you can divide the number by 2 before you get a value that's less than or equal to one.
+
+log8 = 3
+
+log25 = 
+25/2
+12.5/2
+6.25/2
+3.125/2
+1.5625/2
+0.78125
+so somewhere between 4 and 5 
+log25 = 4.65
+
+O(logn) is good after O(1)
+
+certain searching algorithms will have logorithmic time complexity
+efficient solving algorithms involve logarithms
+recursion sometimes involves logorithmic space complexity
