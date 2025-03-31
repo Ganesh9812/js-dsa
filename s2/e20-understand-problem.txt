@@ -1,0 +1,32 @@
+understand the problem
+
+can i restate the problem in my own words 
+what are the inputs that go into the problem
+what are the outputs that should come from the solution into the problem 
+can the outputs be determined from the inputs, means do we have enough info to solve the problem 
+how should i lable the important pieces of data that are a part of the problem 
+
+
+eg: write a function which takes 2 numbers as a input and returns their sum
+
+can i restate the problem in my own words 
+like function that adds two numbers - implement addition
+
+what are the inputs that go into the problem
+think what if they send more numbers instead of 2 
+
+what are the outputs that should come from the solution into the problem 
+output needs to be in float in case if we get 2 numbers as integers or float......that kind 
+what about strings as inputs...
+
+can the outputs be determined from the inputs, means do we have enough info to solve the problem 
+in most cases answer is yes 
+what happens if someone passed only one number 
+
+
+
+how should i lable the important pieces of data that are a part of the problem 
+what matters
+we have inputs
+we have outputs 
+
