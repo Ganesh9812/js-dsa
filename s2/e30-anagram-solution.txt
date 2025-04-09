@@ -1,0 +1,54 @@
+function same(s1, s2){
+    if(s1.length === s2.length){
+        return false;
+    }
+    const frequencyCounter1 = {};
+    const frequencyCounter2 = {};
+    for(let w of s1){
+        frequencyCounter1[w] = (frequencyCounter1[w] || 0) + 1;
+    }
+    for(let w of s2){
+        frequencyCounter2[w] = (frequencyCounter2[w] || 0) + 1;
+    }
+    for (let key in frequencyCounter1){
+        if (!(key in frequencyCounter2)){
+            return false
+        }
+        if (frequencyCounter2[key] !== frequencyCounter1[key]){
+            return false
+        }
+    }
+    return true;
+
+}
+
+O(n)
+this is my solution
+
+
+now the solution by instrcutor
+
+
+function same(s1, s2){
+    if(s1.length === s2.length){
+        return false;
+    }
+    const obj = {};
+   for ( let i  = 0; i < s1.length; i ++ ){
+     let letter = s1[i];
+     obj[letter] = (obj[letter] || 0) + 1;
+   }
+
+   for (let i = 0; i < s2.length; i ++){
+        let letter = s2[i];
+        if(!obj[letter]){
+            return false;
+        } else {
+            obj[letter] -= 1;
+        }
+   }
+   return true;
+
+}
+
+O(n)

@@ -1,0 +1,15 @@
+first thing we discussed is
+deviced a plan for solving problem which we discussed in the previous section 
+
+now 
+master common problem solving patterns
+
+some patters 
+frequency counters
+multiple pointers 
+sliding window
+divide and conquer
+dynamic programming
+greedy algorithm
+backtracking
+many more

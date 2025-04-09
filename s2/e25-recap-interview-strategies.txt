@@ -1,0 +1,5 @@
+understand the problem
+expore concrete examples
+break it down
+solve/simplify
+look back and refactor

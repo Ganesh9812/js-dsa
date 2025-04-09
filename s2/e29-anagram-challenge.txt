@@ -1,0 +1,17 @@
+anagram challenge
+
+writing a valid anagram that takes 2 strings
+returns true if strings are anagrams of another
+solve using frequency counter pattern
+"" "" true
+aaz azz false 
+anagram nagaram true 
+rat car false
+awesome awesom false 
+qwerty qeywrt true 
+texttwisttime timetwisttext true 
+
+check if frequencey as well correct along with the ocurrences
+for now consider all the inputs to be single words with no spaces, periods or other specail characters 
+lower case letters 
+

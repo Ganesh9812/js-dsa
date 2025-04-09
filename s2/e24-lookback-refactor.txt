@@ -1,0 +1,87 @@
+
+function charCount(str){
+    var result = {};
+    for (var i = 0; i < str.length; i++){
+        var char = str[i].toLowerCase();
+        if(result[char] > 0){
+            result[char] ++
+        }
+         else {
+            result[char] = 1;
+        } 
+           
+    }
+    return result;
+}
+
+always try and improve the code 
+
+refactoring questions
+can you check the result
+
+can you derive the result differently
+
+
+can you understand it at a glance
+
+can you use the result or method for some other problem
+
+can you improve the performance of your solution
+
+can you think of other ways to refactor 
+
+how have other people solved this problem 
+
+
+function charCount(str){
+    var result = {};
+    for (var i = 0; i < str.length; i++){
+        var char = str[i].toLowerCase();
+        if(/[a-z0-9]/.test(char)){
+            if(result[char] > 0){
+                result[char] ++
+            }
+            else {
+                result[char] = 1;
+            } 
+        }   
+    }
+    return result;
+}
+
+lets refactor a bit 
+
+function charCount(str){
+    var result = {};
+    for (var char of str){
+        var char = char.toLowerCase();
+        if(/[a-z0-9]/.test(char)){
+            result[char] = ++result[char] || 1
+        }    
+    }
+    return result;
+}
+
+instead of regrex, we can do charCodeAt()
+gives
+for numeric(0-9) - 47-58
+for lower case(a-z)- 96-123
+for uppercase (A-Z)-64-91
+
+function charCount(str){
+    var result = {};
+    for (var char of str){
+        var char = char.toLowerCase();
+        const code = charCodeAt(char);
+        if((code > 96 && code < 123) || (code > 47 && code < 58)){
+            result[char] = ++result[char] || 1
+        }    
+    }
+    return result;
+}
+
+
+function isAlphaNumberic(char){
+    var code = char.charCodeAt(0);
+    if()
+}

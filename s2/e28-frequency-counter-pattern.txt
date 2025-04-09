@@ -1,0 +1,72 @@
+this is basically to avoid O(n^2) for nested loop operations with arrays for strings
+
+this pattern uses objects or sets to collect values or frequencies of values
+
+when we are comparing two input data or more than two  and frequencies of certain things 
+
+example 
+
+function which accepts 2 arrays 
+should return true if every value in the array has its corresponding value squared in the second array 
+the frequency of values must be same 
+
+[1, 2, 3] - [4, 1, 9] - true
+[1, 2, 3] - [1, 9] - false
+[1, 2, 1] - [4, 4, 1] - false this is also becasue freqquency also needs to be same  because 1 , 1 so 1, 1, should be present but here only 1 is present 1 item 
+here considering frequency means left array and right array length is same
+if not same return false 
+
+
+function same(arr1, arr2) {
+    if (arr1.length === arrs.length){
+        return false;
+    }
+    for (let i = 0; i < arr1.length; i ++){
+        const correctIndex = arr2.indexOf(arr1[i] ** 2)
+        if(correctIndex === -1){
+            return false
+        }
+        arr2.splice(correctIndex, 1);
+    }
+    return true;
+}
+
+here it is O(n2) because if arr1 grows arr2.indexOf also grows  and since it is nested so big o is O
+
+so we need to make this O(n)
+how can we do that
+
+so here is where frequency counter pattern comes instead of looping with nested with second array 
+here we can looper over each array individually
+refactored
+
+function same(arr1, arr2){
+    if(arr1.length === arr2.length){
+        return false;
+    }
+    let frequencyCounter1 = {};
+    let frequencyCounter2 = {};
+    for(let val of arr1){
+        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+    }
+    for(let val of arr2){
+        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+    }
+    for (let key in frequencyCounter1){
+        if(!(key ** 2 in frequencyCounter2)){
+            return false;
+        }
+        if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]){
+            return false;
+        }
+    }
+    return true;
+
+}
+
+
+for array better for array iterations use for of  and object keys iteration and check use for in 
+
+here O(n) 
+
+

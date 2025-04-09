@@ -1,0 +1,29 @@
+in interview come up with concrete examples
+start with simple examples
+progress to make complex examples
+explore examples with empty inputs
+explore examples with invalid inputs
+
+so in interview
+write a function which takes a string and return count of each character in the string
+
+
+
+example
+charCount("aaaa"); // { a: 4}
+charCount("hello"); // { h: 1, e:1, l: 2, o: 1}
+
+progess to complex examples 
+"my phone number is 334555559"
+"Hello hi"
+
+we need to understand problem more before we start on it 
+
+explore examples with empty inputs
+charCount("")
+what do we want to return in this case 
+
+explore exaple with invalid inputs
+what if invalid input like object or numbers are passed instead of string 
+we need think of all sort of these edge cases 
+understanding the edge cases is important in the real world 
