@@ -1,0 +1,9 @@
+count unique value change using multi pointer pattern
+ 
+create a function 
+countUnqiueValues
+which accepts a sorted array 
+there can be negative numbers in the array but will be always sorted 
+[1,1,1,1,1, 2] - 2
+[] - 0
+[-2, -1, -1, 0, 1] - 4

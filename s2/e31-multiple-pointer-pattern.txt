@@ -1,0 +1,71 @@
+multi pointer
+
+pointers here referred to references which are index
+
+The multi-pointer technique is an efficient approach for solving problems with arrays or linked lists by using multiple references (pointers) to traverse the data structure. Here's a comprehensive guide to implementing it in JavaScript:
+
+creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain conditions
+
+very efficient in solving problems with minimal space space complexity as well
+
+[-4, -3, -2, -1, 0, 1, 2, 3, 4]
+"ghkjhghjkghjkhghjklkjh"
+so here if we are searching for a pair to meet a conditions
+eg: the condition might be sum of the pair is 0
+usually we use two references one starting and another reference starting from end 
+and work towards middle , towards each other 
+when we say reference it is like i and j  which are numbers referring to index 
+there is no guaranted direction
+we use two reference towards middle toward each other
+this is sort of loosely defined one compared to last pattern what we saw frequency counter
+
+
+eg:
+sum which accepts a sorted array 
+function should find the first pair where the sum is 0;
+return an array that includes both values that sum to zero or undefined if that pair does not exist 
+
+[-3, -2, -1, 0, 1, 2, 3]
+
+function sum(arr){
+    for (i = 0; i < arr.length; i ++){
+        for (j = i + 1; j < arr.length ; j ++){
+            if (arr[i] + arr[j] === 0){
+                return [arr[i], arr[j]];
+            }
+        }
+    }
+}
+
+this is has time complexity as O(n2)
+
+here is the refactored two pointer solution
+
+
+use for loop for 
+You know exactly how many times you want to loop
+You need a counter variable
+Iterating through arrays or strings
+
+Use while when:
+You don't know how many iterations you'll need
+You're waiting for a specific state or unitl some condition met 
+
+
+function sum(arr){
+    let left = 0;
+    let right = arr.length - 1;
+    while(left < right) {
+        let sum = arr[left] + arr[right];
+        if (sum === 0){
+            return [arr[left], arr[right]];
+        } else if (sum > 0){
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
+time complexity is O(n)
+
+
