@@ -1,0 +1,64 @@
+"hellothere"
+"hel" - unique but not longest
+"lother" - unique and longest
+
+if we ask write a function to find the longest sequence of unique characters 
+
+these kind of problems we can solve using sliding window approach 
+
+also to find the max sub array sum
+
+maxSubarrySum([1, 2, 5, 2, 8, 1, 5], 2) - [2, 8]
+2 digits 2 and 8 next to each other with max sum 
+
+([1, 2, 5, 2, 8, 1, 5], 4) - [2, 5, 2, 8]
+
+([], 4) - return null 
+
+
+this pattern involves in creating a window which can either be an array or number from one position to another position
+
+depending on a certain condition the window either increases or closes(and a new window is created)
+
+very useful for keeping track of a subset of data in an array/string etc...
+
+the below is the solution with loop inside the loop 
+time complexity O(n2)
+
+function maxSubArraySum(arr, num) {
+    if (num > arr.length){
+        return null;
+    }
+    let max = -Infinity;
+    for ( let i = 0 ; i < arr.length - num + 1 ; i ++){
+        temp = 0;
+        for ( let j = 0 ; j < num; j++){
+            temp += arr[i + j];
+        }
+        if (temp > max) {
+            max = temp
+        }
+    }
+    return max
+}
+
+
+refactor solution 
+function maxSubArraySum(arr, num) {
+    let maxSum = 0;
+    let tempSum = 0;
+    if (num > arr.length){
+        return null;
+    }
+    for (let i = 0 ; i < num; i++){
+        maxSum += arr[i];
+    }
+    tempSum = maxSum;
+    for (let i = num; i < arr.length; i++ ){
+        tempSum = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum)
+    }
+    return maxSum;
+}
+
+O(n)
