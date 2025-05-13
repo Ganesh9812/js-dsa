@@ -1,0 +1,5 @@
+divide and conquer
+
+this pattern can tremendously decrease the time complexity
+
+sorting algos quick sort and merge sort are examples of this pattern
