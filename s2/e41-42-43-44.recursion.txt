@@ -1,0 +1,21 @@
+recursion
+different way of writing solutions
+
+why use recursion
+a process a function that calls itself
+there we will be some end point
+
+why to know this
+its everywhere
+JSON.parse JSON.stringify
+document.getElementById
+Object traversal
+cleaner alternative to iteration
+
+call stack
+when the recursive function calling itself over and over, what happens behind the scenes
+
+anytime a function is invoked it is placed on top of call stack (push)
+when js sees return keyword the function ends, the compiler will remove the (pop)
+
+with recursive functions, they keep pushing function over and over onto the callstack and waiting to be called

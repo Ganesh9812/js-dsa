@@ -1,0 +1,48 @@
+invoke a same function with a different input until you reach your base case
+
+first recursive function
+
+base case is where recursion stops
+
+2 essential for any recursion
+
+base case
+different input
+
+function countDown(num) {
+ if(num <=0){
+    console.log("All done");
+    return;
+ }
+ console.log(num);
+ num--
+ countDown(num);
+}
+
+the above also can be done easily without recursion
+
+coming to recursion
+countDown(3);
+
+ if(num <=0){
+    console.log("All done");
+    return;
+ }
+
+ is the basecase else it will run for forever
+ 
+second recursive function
+
+function sumRange(num) {
+   if (num ==== 1) return 1;
+   return num + sumRange(num-1)
+}
+
+a base case always conditional to check for something
+
+
+3
+
+3 + sumargae(2)
+
+in this case whatever returns from basecase matters
